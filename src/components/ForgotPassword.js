@@ -1,4 +1,5 @@
 import React, { useState, useEffect} from 'react';
+import { Link } from 'react-router-dom';
 
 function ForgotPassword() {
   
@@ -20,7 +21,11 @@ function ForgotPassword() {
       <div>
           <h1>Forgot Password</h1>
           {occupations.map(occupation => (
-            <div key={occupation.id}>{occupation.occupationName}</div>            
+            <div key={occupation.id}>
+              <Link to={`/occupationDetails/${occupation.id}`}>
+                {occupation.occupationName}
+              </Link>
+              </div>            
           ))}
       </div>
   );
