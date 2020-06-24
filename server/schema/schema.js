@@ -1,11 +1,14 @@
 //import _ from 'lodash';
-import graphql from 'graphql';
+import graphql from "graphql";
+
+import RootQueryType from "./root_query_type.js";
+// import mutations from "./mutations.js";
+
 const { GraphQLSchema } = graphql;
 
-import RootQueryType from './root_query_type';
-import mutations from './mutations';
-
-module.exports = new GraphQLSchema({
-    query: RootQueryType,
-    mutation: mutations
+const schema = new GraphQLSchema({
+  query: RootQueryType,
+  //   mutation: mutations,
 });
+
+export default schema;
