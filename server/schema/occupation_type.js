@@ -7,7 +7,7 @@ const OccupationType = new GraphQLObjectType({
   fields: {
     id: { type: GraphQLInt },
     occupationName: { type: GraphQLString },
-    createdAt: { type: GraphQLDate },
+    created: { type: GraphQLString },
   },
 });
 
